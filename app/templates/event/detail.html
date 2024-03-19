@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="event">
+    <h1>Детальна інформація про подію {{ event.id }}</h1>
+    <ul>
+    <li>ID: {{ event.id }}</li>
+    <li>Заголовок: {{ event.title }}</li>
+    <li>Опис: {{ event.description }}</li>
+    <li>Дата створення: {{ event.begin_at }}</li>
+    <li>Дата завершення: {{ event.end_at }}</li>
+    </ul>
+    <a href="{{ url_for('e_views.update_event', id=event.id) }}"><button>Update event</button></a>
+</div>
+{% endblock %}

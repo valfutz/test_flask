@@ -1,0 +1,136 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+html,body{
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
+main{
+    width: 80%;
+    min-height: 100%;
+    font-family: Arial, serif;
+    background-color: #f2f2f2;
+    color: #3f4137;
+}
+.clear{
+    clear: both;
+}
+
+a{
+    color: #0059b2;
+    text-decoration: none;
+}
+a:hover{
+    color: #cc0000;
+    text-decoration: underline;
+}
+.title{
+    float: right;
+    position: relative;
+    right: 50px;
+    top: -70px;
+    color: #fdc073;
+    font-size: 25px;
+}
+.user-info{
+    position: relative;
+    top: -70px;
+    height: 60px;
+    background-color: #fda830;
+    font-size: 50px;
+    padding-left: 20px;
+}
+.event{
+    margin-left: 20px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+}
+.event ul{
+    line-height: 30px;
+    font-size: 20px;
+    list-style-type: none;
+}
+ul.mainmenu {
+    list-style: none;
+    background: #3f4137;
+    height: 80px;
+    color: #fdc073;
+    font-size: 20px;
+    overflow: hidden;
+}
+ul.mainmenu li{
+    float: left;
+    margin: 28px;
+}
+/*ul.mainmenu li.last{*/
+/*    float: right;*/
+/*}*/
+ul.mainmenu li a{
+    color: #fdc073;
+    text-decoration: none;
+}
+ul.mainmenu li a:hover{
+    color: #fda830;
+}
+div.content{
+    position: relative;
+    top: -70px;
+    margin: 10px;
+}
+/*.form-contact label{*/
+/*    display: inline-block;*/
+/*    min-width: 90px;*/
+/*}*/
+/*.form-contact p{*/
+/*    margin: 15px 0*/
+/*}*/
+/*.form-contact input[type=submit]{*/
+/*    font-size: 20px;*/
+/*}*/
+/*input[type=submit]{*/
+/*    padding: 5px 20px;*/
+/*}*/
+.form-contact label{
+    display: inline-block;
+    min-width: 90px;
+}
+.form-contact p{
+    margin: 15px 0
+}
+.form-contact button[type=submit]{
+    font-size: 20px;
+}
+button[type=submit]{
+    padding: 5px 20px;
+}
+.submit{
+    margin-top: 20px;
+    padding: 5px 10px;
+    box-sizing: content-box;
+}
+.form-group{
+    padding-top: 20px;
+}
+.form_register{
+    margin-left: 20px;
+}
+.flash {padding: 10px;}
+.flash.success {
+         border: 1px solid #21DB56;
+         background: #AEFFC5;
+}
+.flash.error {
+         border: 1px solid #FF4343;
+         background: #FF9C9C;
+}
+.invalid {
+         display: inline-block;
+         background: #FF9898;
+}
+.invalid-feedback {
+    color: #CC0000;
+}
+
+

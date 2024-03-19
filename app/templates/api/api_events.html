@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+    <div class="event">
+    <h1>Event List</h1>
+        <a href="{{ url_for('api_views.api_get_events_json') }}">
+            <button>Return a list of objects in JSON format.</button></a>
+        <ul>
+            {% for event in events %}
+                <li><a href="{{ url_for('api_views.api_event_users', event_id=event.id) }}">
+                    {{ event.id }}: {{ event.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

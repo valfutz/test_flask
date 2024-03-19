@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+    <div class="event">
+    <h1>User List</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.id }} {{ user.username }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}

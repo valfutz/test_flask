@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="event">
+    <ul>
+    <li>{{ item.id }}</li>
+    <li>{{ item.first_name }}</li>
+    <li>{{ item.last_name }}</li>
+    <li>{{ item.username }}</li>
+    <li>{{ item.title }}</li>
+    <li>{{ item.description }}</li>
+    </ul>
+</div>
+{% endblock %}

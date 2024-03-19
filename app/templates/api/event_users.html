@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+    <div class="event">
+        <ul>
+            {% for event in events %}
+                <li>
+                    <a href="{{ url_for('api_views.api_event_users', event_id=event.id) }}">
+                    {{ event.id }}: {{ event.title }}</a>
+                    {{ event.id }}: {{ user.username }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+
+{#{% block content %}#}
+{#{{ super() }}#}
+{#    <div class="event">#}
+{#        <h1>Користувачі події "{{ event.title }}"</h1>#}
+{#        <ul>#}
+{#            {% for user in event_users %}#}
+{#                <li>{{ user.id }}: {{ user.username }}</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#    </div>#}
+{#{% endblock %}#}

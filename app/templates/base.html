@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet"/>
+{#    <title>{% block title -%}Robot{% endblock %}</title>#}
+{% block title -%}
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>Flask aplication</title>
+{% endif %}
+{% endblock %}
+</head>
+<body>
+<main>
+    {%- block mainmenu -%}
+        <ul class="mainmenu">
+    {% for m in menu -%}
+        <li><a href="{{ m.url }}">{{ m.name }}</a></li>
+    {% endfor -%}
+        </ul>
+    {% endblock mainmenu -%}
+    <div class="title">
+    {% if title -%}
+        <h1>Flask aplication - {{title}}</h1>
+    {% else -%}
+        <h1>Flask aplication</h1>
+    {% endif -%}
+    </div>
+    <div class="clear"></div>
+    <div class="container">
+        <div class="user-info">
+            {% if 'username' in session %}
+                <p>Hello, {{ session['username'] }}!</p>
+            {% else %}
+                <p>You are not logged in</p>
+            {% endif %}
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</main>
+</body>
+</html>
